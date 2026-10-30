@@ -60,12 +60,13 @@
     <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="/vendor/jquery-ui.min.css" />
     <link rel="stylesheet" href="/css/dms.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
     <script defer src="/vendor/jquery.min.js"></script>
     <script defer src="/vendor/jquery-ui.min.js"></script>
     <script defer src="/vendor/bootstrap.bundle.min.js"></script>
     <script defer src="/js/dms.js"></script>
 </head>
-<body class="{{ $isSidebarCollapsed ? 'sidebar-collapsed' : '' }}" data-section="{{ $section ?? 'workspaces' }}" data-source="{{ $source ?? 'ALL' }}">
+<body class="dms-v2 {{ $isSidebarCollapsed ? 'sidebar-collapsed' : '' }}" data-section="{{ $section ?? 'workspaces' }}" data-source="{{ $source ?? 'ALL' }}">
     <a class="skip-link" href="#main">Skip to content</a>
     <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
         <div class="sidebar-header">

@@ -1,0 +1,446 @@
+/* ============================================================
+   DMS v2 Design System — tokens + component overrides
+   Scoped under `body.dms-v2`. Remove the class from <body> to
+   revert the entire app to the legacy design (one-class rollback).
+   ============================================================ */
+
+body.dms-v2 {
+  --color-primary: #1F7A46;
+  --color-primary-hover: #155E34;
+  --color-surface-sidebar: #F4F7F4;
+  --color-surface: #FFFFFF;
+  --color-page-bg: #F9FAF9;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #6B7280;
+  --color-text-on-green: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-status-draft-bg: #FDF3E7;
+  --color-status-draft-text: #B45309;
+  --color-status-draft-dot: #D97706;
+  --color-badge-neutral: #E5E7EB;
+  --color-focus-ring: rgba(31, 122, 70, 0.2);
+  --color-error: #DC2626;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+
+  --font-heading: "Playfair Display", "Merriweather", Georgia, serif;
+  --font-body: "Inter", "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+
+  --radius-card: 12px;
+  --radius-input: 8px;
+  --radius-pill: 9999px;
+
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+  background-color: var(--color-page-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+/* ---------- Typography ---------- */
+body.dms-v2 h1, body.dms-v2 .page-heading h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+body.dms-v2 h2, body.dms-v2 .banner-name {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-on-green);
+}
+body.dms-v2 h3, body.dms-v2 .panel-header h2, body.dms-v2 .card-heading {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+body.dms-v2 .eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+body.dms-v2 p, body.dms-v2 body, body.dms-v2 .section-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- App shell: sidebar ---------- */
+body.dms-v2 .sidebar {
+  width: 280px;
+  background-color: var(--color-surface-sidebar);
+  border-right: 1px solid var(--color-border);
+}
+body.dms-v2 .sidebar .main-nav > a {
+  color: #4B5563;
+  font-weight: 400;
+  border-radius: var(--radius-input);
+  padding: 8px 12px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+body.dms-v2 .sidebar .main-nav > a:hover {
+  background-color: rgba(31, 122, 70, 0.06);
+  color: var(--color-text-primary);
+}
+body.dms-v2 .sidebar .main-nav > a.active,
+body.dms-v2 .sidebar .main-nav > a[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: 600;
+  background-color: rgba(31, 122, 70, 0.08);
+}
+body.dms-v2 .workspace-identity {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+}
+body.dms-v2 .profile {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-2) var(--space-3);
+}
+
+/* ---------- Top bar ---------- */
+body.dms-v2 .topbar {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+}
+body.dms-v2 .page-heading h1 { margin-bottom: var(--space-1); }
+body.dms-v2 .page-heading p { color: var(--color-text-secondary); }
+
+/* ---------- Cards / panels ---------- */
+body.dms-v2 .panel,
+body.dms-v2 .card,
+body.dms-v2 .document-detail-card,
+body.dms-v2 .workspace-card,
+body.dms-v2 .stat-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4);
+}
+body.dms-v2 .panel-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+body.dms-v2 .panel-header h2 { font-size: 18px; font-weight: 600; }
+
+/* ---------- Buttons ---------- */
+body.dms-v2 .btn {
+  border-radius: var(--radius-input);
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+body.dms-v2 .btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-on-green);
+}
+body.dms-v2 .btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+body.dms-v2 .btn-outline-secondary,
+body.dms-v2 .btn-secondary {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+body.dms-v2 .btn-outline-secondary:hover,
+body.dms-v2 .btn-secondary:hover {
+  background-color: #F3F4F6;
+  border-color: #D1D5DB;
+}
+body.dms-v2 .btn-outline-danger {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+body.dms-v2 .btn-sm { padding: 6px 12px; font-size: 13px; }
+body.dms-v2 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ---------- Inputs / forms ---------- */
+body.dms-v2 .form-control,
+body.dms-v2 .form-select,
+body.dms-v2 .filter-select {
+  background-color: var(--color-surface);
+  border: 1px solid #D1D5DB;
+  border-radius: var(--radius-input);
+  padding: 10px 14px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+}
+body.dms-v2 .form-control::placeholder { color: #9CA3AF; }
+body.dms-v2 .form-control:focus,
+body.dms-v2 .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+  outline: none;
+}
+body.dms-v2 .form-control:disabled,
+body.dms-v2 .form-control[readonly] {
+  background-color: #F3F4F6;
+  color: var(--color-text-secondary);
+}
+body.dms-v2 .form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+body.dms-v2 .is-invalid { border-color: var(--color-error); }
+body.dms-v2 .invalid-feedback, body.dms-v2 .text-danger { color: var(--color-error); font-size: 12px; }
+
+/* ---------- Tables ---------- */
+body.dms-v2 .table {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+body.dms-v2 .table thead th {
+  background-color: var(--color-page-bg);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--color-border);
+}
+body.dms-v2 .table td, body.dms-v2 .table th {
+  border-color: var(--color-border);
+  padding: 12px 16px;
+}
+body.dms-v2 .table tbody tr:hover { background-color: #F3F4F6; }
+body.dms-v2 .table-zebra > tbody > tr:nth-of-type(odd) > * {
+  background-color: #F9FAF9;
+}
+
+/* ---------- Badges / pills ---------- */
+body.dms-v2 .status-badge {
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+body.dms-v2 .status-badge.clean { background-color: #DCFCE7; color: #166534; }
+body.dms-v2 .status-badge.pending { background-color: #FEF3C7; color: #92400E; }
+body.dms-v2 .status-badge.failed { background-color: #FEE2E2; color: #991B1B; }
+body.dms-v2 .status-badge.neutral { background-color: var(--color-badge-neutral); color: #374151; }
+body.dms-v2 .classification {
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--color-badge-neutral);
+  color: #374151;
+}
+
+/* ---------- Green identity banner ---------- */
+body.dms-v2 .green-banner,
+body.dms-v2 .identity-banner {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-card);
+  color: var(--color-text-on-green);
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+}
+body.dms-v2 .green-banner .avatar,
+body.dms-v2 .identity-banner .avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.2);
+  color: var(--color-text-on-green);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 24px; font-weight: 700;
+}
+body.dms-v2 .green-banner .draft-badge,
+body.dms-v2 .identity-banner .draft-badge {
+  background-color: var(--color-status-draft-bg);
+  color: var(--color-status-draft-text);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+body.dms-v2 .green-banner .draft-badge::before,
+body.dms-v2 .identity-banner .draft-badge::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-status-draft-dot);
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ---------- Hero header ---------- */
+body.dms-v2 .hero-header {
+  padding: var(--space-5) var(--space-4);
+  background: linear-gradient(180deg, rgba(31,122,70,0.06) 0%, transparent 100%);
+}
+
+/* ---------- Sidebar "need a hand" box ---------- */
+body.dms-v2 .help-box {
+  background-color: rgba(31, 122, 70, 0.08);
+  border: 1px solid rgba(31, 122, 70, 0.15);
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+}
+body.dms-v2 .help-box a { color: var(--color-primary); font-weight: 600; }
+
+/* ---------- Modals ---------- */
+body.dms-v2 .modal-content {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+body.dms-v2 .modal-header {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+}
+body.dms-v2 .modal-header .modal-title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+body.dms-v2 .modal-body { padding: var(--space-4); }
+body.dms-v2 .modal-footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+}
+
+/* ---------- Empty state ---------- */
+body.dms-v2 .empty-state {
+  text-align: center;
+  padding: var(--space-5) var(--space-3);
+  color: var(--color-text-secondary);
+}
+body.dms-v2 .empty-state h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: var(--space-2) 0;
+}
+
+/* ---------- jQuery UI widget restyle (CSS only) ---------- */
+body.dms-v2 .ui-tabs {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+body.dms-v2 .ui-tabs .ui-tabs-nav {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0;
+  border-radius: 0;
+}
+body.dms-v2 .ui-tabs .ui-tabs-nav li {
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-input) var(--radius-input) 0 0;
+  margin: 0 4px 0 0;
+}
+body.dms-v2 .ui-tabs .ui-tabs-nav li a {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: var(--radius-input) var(--radius-input) 0 0;
+}
+body.dms-v2 .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+  color: var(--color-primary);
+  font-weight: 600;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-bottom-color: var(--color-surface);
+}
+body.dms-v2 .ui-tabs .ui-tabs-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+  padding: var(--space-4);
+}
+body.dms-v2 .ui-datepicker {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: var(--space-2);
+}
+body.dms-v2 .ui-datepicker .ui-datepicker-header {
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+body.dms-v2 .ui-datepicker .ui-state-default {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text-primary);
+  border-radius: var(--radius-input);
+}
+body.dms-v2 .ui-datepicker .ui-state-hover {
+  background: rgba(31, 122, 70, 0.08);
+  border-color: rgba(31, 122, 70, 0.15);
+}
+body.dms-v2 .ui-datepicker .ui-state-active {
+  background: var(--color-primary);
+  color: var(--color-text-on-green);
+  border-color: var(--color-primary);
+}
+body.dms-v2 .ui-autocomplete {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: var(--space-1);
+}
+body.dms-v2 .ui-autocomplete .ui-menu-item-wrapper {
+  padding: 6px 10px;
+  border-radius: var(--radius-input);
+}
+body.dms-v2 .ui-autocomplete .ui-menu-item-wrapper.ui-state-active {
+  background: var(--color-primary);
+  color: var(--color-text-on-green);
+  border: none;
+}
+body.dms-v2 .ui-draggable-dragging {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  opacity: 0.9;
+}
+body.dms-v2 .folder-drop-hover { background-color: rgba(31, 122, 70, 0.12); }
+body.dms-v2 .folder-drop-ready { outline: 2px dashed var(--color-primary); }
+
+/* ---------- Responsive (inferred) ---------- */
+@media (max-width: 1023px) {
+  body.dms-v2 .two-column { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  body.dms-v2 .sidebar { transform: translateX(-100%); transition: transform 200ms ease; }
+  body.dms-v2 .sidebar.is-open { transform: translateX(0); }
+}
