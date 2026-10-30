@@ -436,7 +436,19 @@ body.dms-v2 .ui-draggable-dragging {
 body.dms-v2 .folder-drop-hover { background-color: rgba(31, 122, 70, 0.12); }
 body.dms-v2 .folder-drop-ready { outline: 2px dashed var(--color-primary); }
 
-/* ---------- Responsive (inferred) ---------- */
+/* ---------- Login page (apply new palette) ---------- */
+body.dms-v2.login-page { background-color: var(--color-page-bg); color: var(--color-text-primary); }
+body.dms-v2 .login-story { background: var(--color-primary); }
+body.dms-v2 .login-message > .eyebrow { color: var(--color-yellow-400, #F4CD42); }
+body.dms-v2 .login-message h1 { color: var(--color-text-on-green); }
+body.dms-v2 .login-message > p { color: rgba(255,255,255,0.75); }
+body.dms-v2 .login-feature-item strong { color: var(--color-text-on-green); }
+body.dms-v2 .login-feature-dot { background: var(--color-text-on-green); }
+body.dms-v2 .login-form { background: var(--color-surface); }
+body.dms-v2 .login-form h2 { color: var(--color-text-primary); }
+body.dms-v2 .login-form .form-label { color: #374151; }
+body.dms-v2 .login-form .form-control { color: var(--color-text-primary); background: var(--color-surface); }
+body.dms-v2 .login-help, body.dms-v2 .login-policy { color: var(--color-text-secondary); }
 @media (max-width: 1023px) {
   body.dms-v2 .two-column { grid-template-columns: 1fr; }
 }
@@ -444,3 +456,16 @@ body.dms-v2 .folder-drop-ready { outline: 2px dashed var(--color-primary); }
   body.dms-v2 .sidebar { transform: translateX(-100%); transition: transform 200ms ease; }
   body.dms-v2 .sidebar.is-open { transform: translateX(0); }
 }
+/* Ensure readable text on light surfaces */
+body.dms-v2,
+body.dms-v2 .panel,
+body.dms-v2 .card,
+body.dms-v2 .document-detail-card,
+body.dms-v2 .workspace-card,
+body.dms-v2 .stat-card,
+body.dms-v2 .table,
+body.dms-v2 .modal-content {
+  color: var(--color-text-primary);
+}
+body.dms-v2 a { color: var(--color-primary); }
+body.dms-v2 .text-muted { color: var(--color-text-secondary); }
