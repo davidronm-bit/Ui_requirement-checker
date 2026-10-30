@@ -92,16 +92,14 @@
                 <span class="sidebar-toggle-icon" aria-hidden="true">«</span>
             </button>
         </div>
-        <div class="workspace-label">{{ $isAdmin ? 'ADMINISTRATION':'YOUR WORKSPACE' }}</div>
-        <div
-            class="workspace-identity"
-            data-bs-toggle="tooltip"
-            data-bs-placement="right"
-            title="{{ $workspaceName }} · {{ $viewer->campus }} campus"
-            aria-label="{{ $workspaceName }} · {{ $viewer->campus }} campus">
-            <span class="source-icon">{{ $workspaceCode }}</span>
-            <div class="workspace-info"><strong>{{ $workspaceName }}</strong><small>{{ $viewer->campus }} campus</small></div>
+        @if ($isAdmin || $viewer->isSuperAdmin())
+        <div class="admin-panel">
+            <div class="admin-badge">ADMIN</div>
+            <h2 class="admin-title">{{ $workspaceName }}</h2>
+            <p class="admin-subtitle">{{ $viewer->campus }} campus</p>
         </div>
+        <div class="nav-section-label">ADMINISTRATION</div>
+        @endif
         <nav class="main-nav">
             @foreach ($sections as $key=>[$glyph,$label])
                 @continue ($key === 'connectors' && ! $viewer->can('connectors.manage'))

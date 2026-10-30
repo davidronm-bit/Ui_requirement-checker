@@ -81,42 +81,212 @@ body.dms-v2 p, body.dms-v2 body, body.dms-v2 .section-description {
 /* ---------- App shell: sidebar ---------- */
 body.dms-v2 .sidebar {
   width: 280px;
-  background-color: var(--color-surface-sidebar);
-  border-right: 1px solid var(--color-border);
+  background-color: #0e2a24;
+  border-right: none;
+}
+body.dms-v2 .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  gap: 12px;
+}
+body.dms-v2 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+body.dms-v2 .brand-mark {
+  width: 40px;
+  height: 40px;
+  background-color: #F4CD42;
+  color: #0e2a24;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+}
+body.dms-v2 .brand-text {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-body);
+}
+body.dms-v2 .brand-text small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+body.dms-v2 .sidebar-toggle {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dms-v2 .sidebar-toggle:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+body.dms-v2 .sidebar-toggle-icon {
+  font-size: 14px;
+}
+body.dms-v2 .admin-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0 16px 16px 16px;
+}
+body.dms-v2 .admin-badge {
+  background-color: #F4CD42;
+  color: #0e2a24;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+}
+body.dms-v2 .admin-title {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+body.dms-v2 .admin-subtitle {
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+  margin: 2px 0 0 0;
+}
+body.dms-v2 .nav-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin: 0 16px 12px 16px;
 }
 body.dms-v2 .sidebar .main-nav > a {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 400;
-  border-radius: var(--radius-input);
-  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin: 0 12px;
   transition: background-color 150ms ease, color 150ms ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
 }
 body.dms-v2 .sidebar .main-nav > a:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.06);
   color: #FFFFFF;
 }
 body.dms-v2 .sidebar .main-nav > a.active,
 body.dms-v2 .sidebar .main-nav > a[aria-current="page"] {
   color: #F4CD42;
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(244, 205, 66, 0.12);
 }
-body.dms-v2 .workspace-identity {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-card);
-  padding: var(--space-3);
+body.dms-v2 .sidebar .main-nav > a + a { margin-top: 6px; }
+body.dms-v2 .nav-caption {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin: 20px 12px 8px 12px;
+  display: block;
+}
+body.dms-v2 .sidebar-bottom {
+  padding: 20px 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 16px;
+}
+body.dms-v2 .return-admin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin: 0 12px 8px 12px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+body.dms-v2 .return-admin:hover {
+  background-color: rgba(255,255,255,0.06);
   color: #FFFFFF;
 }
 body.dms-v2 .profile {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-card);
-  padding: var(--space-2) var(--space-3);
+  background-color: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0 12px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+body.dms-v2 .profile .avatar {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
   color: #FFFFFF;
 }
-body.dms-v2 .workspace-label { color: rgba(255, 255, 255, 0.6); }
-body.dms-v2 .sidebar-header { color: #FFFFFF; }
+body.dms-v2 .profile .profile-info strong {
+  display: block;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+body.dms-v2 .profile .profile-info small {
+  display: block;
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+}
+body.dms-v2 .profile .icon-button {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  padding: 6px;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dms-v2 .profile .icon-button:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #FFFFFF;
+}
 
 /* ---------- Top bar ---------- */
 body.dms-v2 .topbar {
@@ -453,3 +623,25 @@ body.dms-v2 .modal-content {
 }
 body.dms-v2 a { color: var(--color-primary); }
 body.dms-v2 .text-muted { color: var(--color-text-secondary); }
+
+/* ---------- Sidebar collapsed state ---------- */
+body.dms-v2 .sidebar.sidebar-collapsed { width: 72px; }
+body.dms-v2 .sidebar.sidebar-collapsed .brand-text,
+body.dms-v2 .sidebar.sidebar-collapsed .nav-label,
+body.dms-v2 .sidebar.sidebar-collapsed .admin-title,
+body.dms-v2 .sidebar.sidebar-collapsed .admin-subtitle,
+body.dms-v2 .sidebar.sidebar-collapsed .nav-section-label,
+body.dms-v2 .sidebar.sidebar-collapsed .nav-caption,
+body.dms-v2 .sidebar.sidebar-collapsed .profile-info,
+body.dms-v2 .sidebar.sidebar-collapsed .return-text {
+  display: none;
+}
+body.dms-v2 .sidebar.sidebar-collapsed .brand { justify-content: center; gap: 6px; }
+body.dms-v2 .sidebar.sidebar-collapsed .admin-panel { justify-content: center; padding: 12px; gap: 8px; }
+body.dms-v2 .sidebar.sidebar-collapsed .admin-badge { font-size: 10px; padding: 4px 8px; }
+body.dms-v2 .sidebar.sidebar-collapsed .sidebar .main-nav > a { justify-content: center; padding: 10px; margin: 0 6px 6px 6px; }
+body.dms-v2 .sidebar.sidebar-collapsed .sidebar .main-nav > a + a { margin-top: 6px; }
+body.dms-v2 .sidebar.sidebar-collapsed .return-admin { justify-content: center; padding: 10px; margin: 0 6px 6px 6px; }
+body.dms-v2 .sidebar.sidebar-collapsed .profile { justify-content: center; padding: 12px; gap: 8px; }
+body.dms-v2 .sidebar.sidebar-collapsed .profile .icon-button { margin-left: 0; }
+
