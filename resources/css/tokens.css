@@ -7,9 +7,9 @@
 body.dms-v2 {
   --color-primary: #1F7A46;
   --color-primary-hover: #155E34;
-  --color-surface-sidebar: #F4F7F4;
+  --color-surface-sidebar: #E8F1EA;
   --color-surface: #FFFFFF;
-  --color-page-bg: #F9FAF9;
+  --color-page-bg: #EDF4EE;
   --color-text-primary: #1A1A1A;
   --color-text-secondary: #6B7280;
   --color-text-on-green: #FFFFFF;
@@ -130,7 +130,7 @@ body.dms-v2 .document-detail-card,
 body.dms-v2 .workspace-card,
 body.dms-v2 .stat-card {
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid #d8e3d1;
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
   padding: var(--space-4);
@@ -229,7 +229,7 @@ body.dms-v2 .table td, body.dms-v2 .table th {
 }
 body.dms-v2 .table tbody tr:hover { background-color: #F3F4F6; }
 body.dms-v2 .table-zebra > tbody > tr:nth-of-type(odd) > * {
-  background-color: #F9FAF9;
+  background-color: #e4eae2;
 }
 
 /* ---------- Badges / pills ---------- */
