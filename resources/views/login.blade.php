@@ -7,10 +7,9 @@
     <title>Sign in · PLP Documents</title>
     <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/dms.css" />
-    <link rel="stylesheet" href="/css/tokens.css" />
     <script defer src="/vendor/bootstrap.bundle.min.js"></script>
 </head>
-<body class="login-page dms-v2">
+<body class="login-page">
     <div class="login-story">
         <a class="brand" href="/login"
             ><span class="brand-mark">d.</span><span>PLP Documents<small>DOCUMENT MANAGEMENT SYSTEM</small></span></a
